@@ -1,1 +1,9 @@
-cp_steel
+arena_badlands
+arena_granary
+arena_lumberyard
+arena_nucleus
+arena_offblast_final
+arena_ravine
+arena_sawmill
+arena_watchtower
+arena_well

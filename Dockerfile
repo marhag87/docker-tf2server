@@ -50,4 +50,4 @@ EXPOSE 27015/udp
 
 # Default start options
 ENTRYPOINT ["/home/tf2/hlserver/tf.sh"]
-CMD ["+sv_pure", "1", "+mapcycle", "mapcycle.txt", "+map", "cp_steel.bsp", "+maxplayers", "24", "+ip", "0.0.0.0"]
+CMD ["+sv_pure", "1", "+mapcycle", "mapcycle.txt", "+map", "arena_sawmill.bsp", "+maxplayers", "24", "+ip", "0.0.0.0"]
