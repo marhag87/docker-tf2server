@@ -1,6 +1,6 @@
 # TF2 dedicated server
 #
-# VERSION 0.0.1
+# VERSION 0.1.0
 
 FROM fedora
 MAINTAINER Martin Hagstrom <martin@mrhg.se>
@@ -8,7 +8,7 @@ MAINTAINER Martin Hagstrom <martin@mrhg.se>
 # Update
 RUN yum update -y
 # Install deps
-RUN yum install -y wget glibc.i686 libgcc.i686
+RUN yum install -y wget glibc.i686 libgcc.i686 tar
 
 # Add user
 RUN useradd tf2
@@ -33,8 +33,8 @@ RUN cp $SERVER/linux32/steamclient.so $HOME/.steam/sdk32
 # Install plugins
 ENV ADDONSBASE $SERVER/tf2/tf/
 ENV ADDONS $ADDONSBASE/addons
-RUN wget -O - http://mirror.pointysoftware.net/alliedmodders/mmsource-1.10.2-linux.tar.gz | tar -C $ADDONSBASE -xz
-RUN wget -O - http://newyork.download.maverickservers.com/source/sourcemod-1.6.1-linux.tar.gz | tar -C $ADDONSBASE -xz
+RUN wget -O - http://mirror.pointysoftware.net/alliedmodders/mmsource-1.10.4-linux.tar.gz | tar -C $ADDONSBASE -xz
+RUN wget -O - http://sourcemod.gameconnect.net/files/sourcemod-1.7.0-linux.tar.gz | tar -C $ADDONSBASE -xz
 ADD metamod.vdf $ADDONS/metamod.vdf
 ADD TF2_Random_Class.smx $ADDONS/sourcemod/plugins/
 
